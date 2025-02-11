@@ -2,21 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
         document.getElementById("loadingScreen").classList.add("hidden");
         document.getElementById("mainContent").classList.remove("hidden");
+        document.getElementById("Footer").style.display = "block";
         showRoom('bedroom'); // Load default room
     }, 2000);
     const historyButton = document.getElementById("historyLogBtn");
         if (historyButton) {
             historyButton.addEventListener("click", showHistoryLog);} // ✅ Ensures function is called
-    
-            const footer = document.querySelector(".footer");
-
-            window.addEventListener("scroll", function () {
-                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 20) {
-                    footer.classList.add("show-footer"); // Show footer when at bottom
-                } else {
-                    footer.classList.remove("show-footer"); // Hide when scrolling up
-                }
-            });
 });
 
 let appliancesData = JSON.parse(localStorage.getItem("appliancesData")) || {
