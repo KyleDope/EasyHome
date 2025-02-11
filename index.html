@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Easy Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <img src="Images/EASY.png" alt="App Icon" width="100">
+    </div>
+    <div class="navbar">
+        <img src="Images/EASY.png" alt="App Icon" class="navbar-icon">
+        <button onclick="showRoom('livingRoom')">Living Room</button>
+        <button onclick="showRoom('bedroom')">Bedroom</button>
+        <button onclick="showRoom('kitchen')">Kitchen</button>
+    </div>
+    <div class="container hidden" id="mainContent">
+        <h2 id="roomTitle">Bedroom Controls</h2>
+        <div id="roomControls"></div>
+        
+        <!-- Add appliance section -->
+        <div id="applianceForm">
+            <input type="text" id="applianceName" placeholder="Enter appliance name">
+            <select id="applianceIcon">
+                <option value="Light.png">Light</option>
+                <option value="TV.png">TV</option>
+                <option value="Speaker.png">Speaker</option>
+                <option value="Fridge.png">Fridge</option>
+                <option value="Microwave.png">Microwave</option>
+                <option value="AC.png">Air Conditioner</option>
+                <option value="PC.png">Computer</option>
+            </select>
+            <div id="addApplianceContainer">
+                <button id="addApplianceBtn" onclick="addAppliance()">Add Appliance</button>
+            </div>
+        </div>
+        
+        <!-- Remove appliance section -->
+        <div id="removeApplianceForm">
+            <select id="removeApplianceSelect"></select>
+            <div id="removeApplianceContainer">
+                <button id="removeApplianceBtn" onclick="removeAppliance()">Remove Appliance</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <button id="historyLogBtn" onclick="showHistoryLog()">
+                <img src="Images/History.png" alt="History" width="25" height="25"> History Log
+            </button>
+        </footer>
+        <!-- Pop-up Modal -->
+        <div id="popupScreen" class="popup hidden">
+            <div class="popup-content">
+                <p id="popupMessage">Error message here</p>
+                <div class="popup-buttons" id="popupButtons"></div> <!-- New button container -->
+            </div>
+        </div>
+    </div>
+    <script src="back.js"></script>
+</body>
+</html>
