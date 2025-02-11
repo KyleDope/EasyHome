@@ -290,6 +290,8 @@ button.on {
     bottom: 0;
     left: 0;
     position: relative; /* Ensures it stays at the bottom without blocking content */
+    padding: 10px;
+    background: #fff;
 }
 
 #historyLogBtn {
