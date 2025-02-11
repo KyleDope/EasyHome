@@ -73,6 +73,9 @@ body {
     border-radius: 8px;
     text-align: center;
     margin-top: 20px;
+    max-height: 100vh; /* Prevents overflow beyond the viewport */
+    overflow-y: auto; /* Enables vertical scrolling when needed */
+    padding-bottom: 60px; /* Adds space for footer visibility */
 }
 
 button {
@@ -286,6 +289,7 @@ button.on {
     position: fixed;
     bottom: 0;
     left: 0;
+    position: relative; /* Ensures it stays at the bottom without blocking content */
 }
 
 #historyLogBtn {
