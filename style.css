@@ -287,6 +287,9 @@ button.on {
     bottom: -60px;
     left: 0;
     transition: bottom 0.3s ease-in-out; /* Smooth slide-in effect */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
 }
 
 .show-footer {
