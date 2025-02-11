@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevents unnecessary scrolling */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -65,6 +71,11 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Makes sure it fits the screen */
+    overflow: auto; /* Allows scrolling only inside if needed */
     width: 90%;
     max-width: 400px;
     background: white;
@@ -227,6 +238,16 @@ button.on {
     align-items: center; /* Center elements */
     gap: 10px; /* Space between inputs */
     margin-top: 20px;
+    position: fixed;
+    bottom: 10px; /* Keeps it at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Pop-up modal styling */
