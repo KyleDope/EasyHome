@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const historyButton = document.getElementById("historyLogBtn");
         if (historyButton) {
             historyButton.addEventListener("click", showHistoryLog);} // ✅ Ensures function is called
+    
+            const footer = document.querySelector(".footer");
+
+            window.addEventListener("scroll", function () {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 20) {
+                    footer.classList.add("show-footer"); // Show footer when at bottom
+                } else {
+                    footer.classList.remove("show-footer"); // Hide when scrolling up
+                }
+            });
 });
 
 let appliancesData = JSON.parse(localStorage.getItem("appliancesData")) || {
